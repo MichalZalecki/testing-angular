@@ -1,0 +1,221 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
+#HTMLReporter { font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333333; }
+#HTMLReporter a { text-decoration: none; }
+#HTMLReporter a:hover { text-decoration: underline; }
+#HTMLReporter p, #HTMLReporter h1, #HTMLReporter h2, #HTMLReporter h3, #HTMLReporter h4, #HTMLReporter h5, #HTMLReporter h6 { margin: 0; line-height: 14px; }
+#HTMLReporter .banner, #HTMLReporter .symbolSummary, #HTMLReporter .summary, #HTMLReporter .resultMessage, #HTMLReporter .specDetail .description, #HTMLReporter .alert .bar, #HTMLReporter .stackTrace { padding-left: 9px; padding-right: 9px; }
+#HTMLReporter #jasmine_content { position: fixed; right: 100%; }
+#HTMLReporter .version { color: #aaaaaa; }
+#HTMLReporter .banner { margin-top: 14px; }
+#HTMLReporter .duration { color: #aaaaaa; float: right; }
+#HTMLReporter .exceptions { color: #fff; float: right; margin-top: 5px; margin-right: 5px; }
+#HTMLReporter .bar { line-height: 28px; font-size: 14px; display: block; color: #eee; }
+#HTMLReporter .runningAlert { background-color: #666666; }
+#HTMLReporter .skippedAlert { background-color: #aaaaaa; }
+#HTMLReporter .skippedAlert:first-child { background-color: #333333; }
+#HTMLReporter .skippedAlert:hover { text-decoration: none; color: white; text-decoration: underline; }
+#HTMLReporter .passingAlert { background-color: #a6b779; }
+#HTMLReporter .passingAlert:first-child { background-color: #5e7d00; }
+#HTMLReporter .failingAlert { background-color: #cf867e; }
+#HTMLReporter .failingAlert:first-child { background-color: #b03911; }
+#HTMLReporter .results { margin-top: 14px; }
+#HTMLReporter #details { display: none; }
+#HTMLReporter .resultsMenu, #HTMLReporter .resultsMenu a { background-color: #fff; color: #333333; }
+#HTMLReporter.showDetails .summaryMenuItem { font-weight: normal; text-decoration: inherit; }
+#HTMLReporter.showDetails .summaryMenuItem:hover { text-decoration: underline; }
+#HTMLReporter.showDetails .detailsMenuItem { font-weight: bold; text-decoration: underline; }
+#HTMLReporter.showDetails .summary { display: none; }
+#HTMLReporter.showDetails #details { display: block; }
+#HTMLReporter .summaryMenuItem { font-weight: bold; text-decoration: underline; }
+#HTMLReporter .summary { margin-top: 14px; }
+#HTMLReporter .summary .suite .suite, #HTMLReporter .summary .specSummary { margin-left: 14px; }
+#HTMLReporter .summary .specSummary.passed span { color: #5e7d00; }
+#HTMLReporter .summary .specSummary.failed span { color: #b03911; }
+#HTMLReporter .description + .suite { margin-top: 0; }
+#HTMLReporter .suite { margin-top: 14px; }
+#HTMLReporter .suite a { color: #333333; }
+#HTMLReporter #details .specDetail { margin-bottom: 28px; }
+#HTMLReporter #details .specDetail .description { display: block; color: white; background-color: #b03911; }
+#HTMLReporter .resultMessage { padding-top: 14px; color: #333333; }
+#HTMLReporter .resultMessage span.result { display: block; }
+#HTMLReporter .stackTrace { margin: 5px 0 0 0; max-height: 224px; overflow: auto; line-height: 18px; color: #666666; border: 1px solid #ddd; background: white; white-space: pre; }
+</style>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script>
+ 	$(function(){
+		$("a.summaryMenuItem").on("click", function(){
+			$("body").removeClass("showDetails").addClass("showSummary");
+		});
+		$("a.detailsMenuItem").on("click", function(){
+			$("body").addClass("showDetails").removeClass("showSummary");
+		});
+
+	});
+ </script>
+</head>
+
+<body id="HTMLReporter" class="html-reporter">
+<h1>PhantomJS 1.9.8 (Linux)</h1>
+
+<div class="alert">
+
+
+
+	
+	<span class="passingAlert bar">Passing 25 specs</span>
+	
+
+
+</div>
+<div class="results">
+	<div class="summary">
+
+
+	
+		<div class="suite passed">
+			<span class="description">alert.alert-directive default</span>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .alert element without additional classes</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should not have .alert-dismissible</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should not have .close button</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should contain appropriate message</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have type undefinied</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have class empty</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">alert.alert-directive dismissible with success type</span>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .alert-success class</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .alert-dismissible class</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .close button class</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .close button which call scope.close() on click</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have scope.close() which call callback if defined</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">alert.alert-directive dismissible with error type and callback</span>
+		
+			<div class="specSummary passed">
+			<span class="description">should have .alert-error class</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have scope.close() which call callback with proper id</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should destroy scope on click</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">myApp myApp.myAppCtrl</span>
+		
+			<div class="specSummary passed">
+			<span class="description">should have scope.people array</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have scope.notify function</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have called filltext.getRecords with 20</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should have called filltext.getRecordsBackUp on fail</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">filltext.filltext-service</span>
+		
+			<div class="specSummary passed">
+			<span class="description">shoud return array of 10 records by default</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">shoud return array of 2 records</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">moment.moment-factory</span>
+		
+			<div class="specSummary passed">
+			<span class="description">shoud be windows.moment</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">moment moment.moment-filter</span>
+		
+			<div class="specSummary passed">
+			<span class="description">should use L (MM/DD/YYYY) format by default</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should say whether date is invalid</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should work with custom format</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">should work with custom escaped format</span>
+			</div>
+		
+		</div>
+	
+</div>
+
+<div id="details">
+	
+</div>
+</body>
+</html>
+

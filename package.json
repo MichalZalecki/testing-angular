@@ -1,0 +1,22 @@
+{
+  "name": "testing-angularjs",
+  "version": "1.0.0",
+  "description": "Testing AngularJS",
+  "scripts": {
+    "test": "karma start",
+    "test-car": "karma start car.karma.conf.coffee",
+    "start": "http-server -a $IP -p $PORT -c-1",
+    "coffee": "coffee -cw -o app/js/ app/coffee/"
+  },
+  "author": "Michal Zalecki",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.30",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-html-reporter": "^0.2.4",
+    "karma-jasmine": "^0.3.3",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}

@@ -1,0 +1,24 @@
+.records-control {
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.records-control__btn {
+    width: 100px;
+  }
+
+.records-control__count {
+  webkit-flex: 1;
+  flex: 1;
+}
+
+@media (min-width: 480px) {
+  .records-list {
+    list-style-position: inside;
+    padding: 0 0 0 6px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
