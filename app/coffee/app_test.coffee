@@ -37,4 +37,4 @@ describe 'myApp', ->
       expect(filltext.getRecords).toHaveBeenCalledWith(20)
 
     it 'should have called filltext.getRecordsBackUp on fail', ->
-      expect(filltext.getRecordsBackUp).toHaveBeenCalled
+      expect(filltext.getRecordsBackUp).toHaveBeenCalled()

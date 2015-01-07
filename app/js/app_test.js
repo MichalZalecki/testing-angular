@@ -37,7 +37,7 @@
         return expect(filltext.getRecords).toHaveBeenCalledWith(20);
       });
       return it('should have called filltext.getRecordsBackUp on fail', function() {
-        return expect(filltext.getRecordsBackUp).toHaveBeenCalled;
+        return expect(filltext.getRecordsBackUp).toHaveBeenCalled();
       });
     });
   });

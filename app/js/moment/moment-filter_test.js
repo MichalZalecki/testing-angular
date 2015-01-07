@@ -4,22 +4,25 @@
   describe('moment', function() {
     beforeEach(module('moment'));
     return describe('moment.moment-filter', function() {
-      var $filter, moment;
-      moment = $filter = {};
+      var $filter;
+      $filter = {};
       beforeEach(inject(function(_$filter_) {
         return $filter = _$filter_;
       }));
       it('should use L (MM/DD/YYYY) format by default', function() {
-        return expect($filter('moment')("2015-01-07 18:30")).toEqual("01/07/2015");
+        return expect($filter('moment')('2015-01-07 18:30')).toEqual('01/07/2015');
       });
       it('should say whether date is invalid', function() {
-        return expect($filter('moment')("AngularJS")).toEqual("Invalid date");
+        return expect($filter('moment')('AngularJS')).toEqual('Invalid date');
       });
       it('should work with custom format', function() {
-        return expect($filter('moment')("2015-01-07 18:30", "MMMM Do YYYY, h:mm:ss a")).toEqual("January 7th 2015, 6:30:00 pm");
+        return expect($filter('moment')('2015-01-07 18:30', 'MMMM Do YYYY, h:mm:ss a')).toEqual('January 7th 2015, 6:30:00 pm');
       });
-      return it('should work with custom escaped format', function() {
-        return expect($filter('moment')("2015-01-07 18:30", "[Hello in] YYYY!")).toEqual("Hello in 2015!");
+      it('should work with custom escaped format', function() {
+        return expect($filter('moment')('2015-01-07 18:30', '[Hello in] YYYY!')).toEqual('Hello in 2015!');
+      });
+      return it('should be able to use custom format', function() {
+        return expect($filter('moment')('01/07/2015', 'YYYY-MM', 'MM/DD/YYYY')).toEqual('2015-01');
       });
     });
   });

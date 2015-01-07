@@ -3,11 +3,18 @@
   'use strict';
   angular.module('moment.moment-filter', []).filter('moment', [
     'moment', function(moment) {
-      return function(input, format) {
+      return function(input, format, formatFrom) {
         if (format == null) {
           format = "L";
         }
-        return moment(input).format(format);
+        if (formatFrom == null) {
+          formatFrom = false;
+        }
+        if (!formatFrom) {
+          return moment(input, "YYYY-MM-DD HH:mm").format(format);
+        } else {
+          return moment(input, formatFrom).format(format);
+        }
       };
     }
   ]);
